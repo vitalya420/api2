@@ -24,4 +24,4 @@ class BaseRepository:
             running_session (AsyncSession): An instance of AsyncSession that will be
                                     used for executing database operations.
         """
-        self.session: AsyncSession
+        self.session: AsyncSession = running_session

@@ -2,6 +2,7 @@ from sanic import Blueprint
 from sanic.views import HTTPMethodView
 
 from app.request import APIRequest
+from app.schemas.user import UserCreate
 
 user: Blueprint
 
@@ -14,7 +15,7 @@ class UserView(HTTPMethodView):
         pass
 
     @staticmethod
-    async def post(request: APIRequest):
+    async def post(request: APIRequest, body: UserCreate):
         """
         Create user
         """
